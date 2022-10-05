@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="CarlosR">
+    <meta name="description" content="Descrição top">
+    <meta name="keywords" content="Html5, tecnologia">
+    
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Exemplo de Formulario</h1>
+<!-- Metodo GET insere no final da action="" o elemento digitado na box-->
+    <form action="http://www.google.com/search" method="GET" target="_blank">
+        
+        <label for="txtbusca" name>Faça um busca:</label>
+        <!-- Input text precisa ter o name="q", pois google coloca essa chave na procura, com isso ele procura a palavra digitada-->
+        <input type="text" class="tftextinput" name="q" id="txtbusca" size="21" maxlength="120">
+        <input type="submit" value="ok">
+
+    </form>
+</body>
+</html>
