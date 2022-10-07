@@ -1,0 +1,18 @@
+
+    p{
+        background-color: rgb(12, 125, 224);
+        font-size: 16px;
+    }
+
+    .paragrafoback{
+        background-color: bisque;
+    }
+
+    .paragrafofont{
+        font-size: 25px;
+    }
+
+    .paragrafoborder{
+        border: 5;
+        border-style: ridge;
+    }

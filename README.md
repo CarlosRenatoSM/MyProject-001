@@ -9,3 +9,7 @@ https://www.ime.usp.br/~pf/algoritmos/apend/ascii.html
 https://www.w3c.br/Padroes/WebSemantica
 
 https://caniuse.com/ 
+
+https://icomoon.io/
+
+https://github.com/valdairelaborata/12831
