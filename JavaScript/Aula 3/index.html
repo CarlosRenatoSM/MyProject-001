@@ -20,17 +20,28 @@
         
 </head>
 <script>
-    var primeiroNumero = parseFloat(prompt('Digite um número'))
+    var primeiroNumero = ''
+    var segundoNumero = ''
+    var historico = ''
+
+    obterNumero('Digite o primeiro número: ')
     
+    exibirHistorico()
+
     function teste(operacao){
 
-        var dv = document.getElementById('dvResultado')
-        var segundoNumero = parseFloat(prompt('Digite o segundo número'))
+        historico += ' ' + operacao
+
+        exibirHistorico()
+
+        obterNumero('Digite o segundo numero')
+        
         var resultado = ''
 
         switch(operacao){
                 case '+':              
                     resultado = (primeiroNumero) + (segundoNumero)
+                    
                 break;
                 case '-':               
                     resultado = primeiroNumero - segundoNumero
@@ -44,24 +55,48 @@
                 default:
                     break;
         }
+        var dv = document.getElementById('dvResultado')
         dv.innerHTML = resultado
+        
 
-        console.log(dv.innerHTML)
+        historico += ' = '
+        exibirHistorico()
+
     }  
+
+    function obterNumero(mensagem){
+
+        var numero = parseFloat(prompt(mensagem))
+
+        if(primeiroNumero == '')
+        {
+            primeiroNumero = numero
+        }
+        else {
+            segundoNumero = numero
+        }
+         
+        historico += ' ' + numero
+       
+    }
+
+    function exibirHistorico(){
+        var dv = document.getElementById('dvHistorico');
+        dv.innerHTML = historico
+        
+    }
 </script>
         
 <body>
-    <legend>Calculadora
-        <form>
+    
         <input type="button" value="+" onclick="teste('+')">
         <input type="button" value="-" onclick="teste('-')">
         <input type="button" value="/" onclick="teste('/')">
         <input type="button" value="*" onclick="teste('*')">
-    </legend>
-    </form>
-
-    <form>
-        <div id="dvResultado">Opa!</div>
-    </form>
+        
+        <br>
+        <div id="dvHistorico"></div>
+        <div id="dvResultado">Resultado!</div>
+    
 </body>
 </html>
