@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>-Calcular tabuada</title>
+    <script type="text/javascript">
+      
+      function calcula_tabuada() {
+        var form = document.getElementById('form');
+        var n = form.numero.value;
+        if (n.match(/^[0-9]+$/)) {
+          var num = parseInt(n);
+          var resultado = 0;
+          tabuada = "";
+          for (operando = 1; operando < 11; operando++) {
+            resultado = num * operando;
+            tabuada = tabuada + num + " * " + operando + " = " + resultado + "\n";
+          }
+          alert(tabuada);
+        } else {
+          alert("Digite um número inteiro válido.");
+        }
+      }
+      //-->
+    </script>
+  </head>
+  <body>
+    <form id="form" action="" method="get">
+      <h3>Cálculo da tabuada utilizando for:</h3>
+      <p>
+        <label for="numero">Digite o número: </label>
+        <input type="text" id="numero" name="numero" value="" />
+      </p>
+      <p>
+        <input type="button" value="Calcular" onclick="return calcula_tabuada();" />
+      </p>
+    </form>
+  </body>
+</html>

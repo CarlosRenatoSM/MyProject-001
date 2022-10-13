@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8">
+<title>Tabuada</title>
+</head>
+<body>
+<h1>Tabuada de Múltiplicação</h1>
+
+<script>
+var valor;
+var n;
+
+valor = prompt("Digite um valor para tabuada: ");
+
+n = parseInt(valor);
+
+while(n<=0){
+valor = prompt("O valor precisa ser maior que zero! Digite um valor para tabuada: ");
+n = parseInt(valor);
+}
+
+for(i=0;i<=10;i++){
+
+document.write(i+" x "+n+" = "+i*n+"<br>");
+
+}
+
+</script>
+</body>
+</html>
