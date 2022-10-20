@@ -19,3 +19,7 @@ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures
 https://github.com/valdairelaborata/12831.git
 
 https://jquery.com/
+
+https://www.w3schools.com/bootstrap5/index.php
+
+https://getbootstrap.com/

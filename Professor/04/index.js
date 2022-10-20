@@ -14,9 +14,6 @@ function adicionarOuAlterar(e) {
     var txtDataNascimento = document.getElementById('dtpDataNascimento');
     var rbSexo = document.getElementById('rdoMasculino');
 
-   
-
-
     var contato = {
         nome: txtNome.value,
         dataNascimento: new Date(txtDataNascimento.value.replace("-", "/")),
